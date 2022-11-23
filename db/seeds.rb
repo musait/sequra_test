@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# require 'csv'
+
+# CSV.read(Rails.root.join('lib', 'merchants.csv'), headers: true).each do |row|
+# binding.pry
+#   merchant = Merchant.new(row.to_hash)
+
+#   unless merchant.save
+#     puts "Merchant not created: #{row.to_hash}"
+#     p merchant.errors.full_messages
+#   end
+
+# end
