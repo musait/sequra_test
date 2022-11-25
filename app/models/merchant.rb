@@ -6,6 +6,6 @@ class Merchant < ApplicationRecord
 
   # Validations
   validates :name, presence: true
-  validates :email, presence: true, uniqueness: true
-  validates :nif, presence: true
+  validates :email, presence: true#, uniqueness: true
+  validates :cif, presence: true
 end
