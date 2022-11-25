@@ -83,6 +83,7 @@ ID | MERCHANT ID | SHOPPER ID | AMOUNT | CREATED AT           | COMPLETED AT
 - Unfortunately, the program don't work properly. The format of the response is not good
 - Some test are not working
 - All the business logic is present but it needs some adjustements for data parsing and tests
+- The Job is not working properly
 
 ## Instructions
 
@@ -103,13 +104,9 @@ bundle exec rake db:setup
 
 `rails c`
 
-To process disbursements from console run:
-`Disbursement.process_disbursements(2018, 35)`
-Default values are current year and current week.
-
 ### Accessing the API endpoint
 
-Considering the server is running in the default development enviorement, the disbursement action will be abailable at:
+Considering the server is running in the default development environment, the disbursement action will be available at:
 `http://localhost:3000/disbursements`
 
 From CLI you can use the command below:
