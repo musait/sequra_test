@@ -1,6 +1,7 @@
 class Disbursement < ApplicationJob
   queue_as :default
 
+  # This job will retrieve all the orders completed but not disbursed and calculate the amount of the disbursement for each merchant and create an entry in Disbursement table with the correct amount
   def perform(*guests)
     order_to_disburse = Order.orders_completed_but_not_disbursed
     merchant_ids = order_to_disburse.pluck(:merchant_id)

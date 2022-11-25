@@ -2,7 +2,7 @@ class Disbursement < ApplicationRecord
   belongs_to :order, optional: true
   belongs_to :merchant
 
-
+  # This method should retrieve disbursement for a given week and a given merchant. It should return an hash to the controller with the data
   def self.retrieve_disbursement_for_a_given_week_merchant(week, merchant_id = nil)
 
     if merchant_id.present?
