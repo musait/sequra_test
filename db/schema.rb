@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_23_125728) do
   enable_extension "plpgsql"
 
   create_table "disbursements", force: :cascade do |t|
-    t.decimal "amount", default: "0.0"
+    t.float "amount", default: 0.0
     t.bigint "merchant_id"
     t.integer "week"
     t.integer "year"
@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_23_125728) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.decimal "amount", null: false
+    t.float "amount", null: false
     t.datetime "completed_at", precision: nil
     t.bigint "merchant_id"
     t.bigint "shopper_id"
